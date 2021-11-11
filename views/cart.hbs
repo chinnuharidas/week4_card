@@ -1,0 +1,32 @@
+<section class="container-fluid p-3 bg-dark">
+    <div class="table-responsive bg-white">
+        <table class="table table-bordered table-striped table-condensed">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price Per Item</th>
+                    <th>Discount</th>
+                    <th class="text-right">Amount</th>
+                </tr>
+            </thead>
+            {{#each cartItems }}
+            <tr>
+                <td>{{ this.slNo }}</td>
+                <td>{{ this.item }}</td>
+                <td>{{ this.quantity }}</td>
+                <td>{{ this.price }}</td>
+                <td>{{ this.discount }}%</td>
+                <td class="text-right">{{ this.amount }}</td>
+            </tr>
+            {{/each }}
+            <tfoot>
+                <tr>
+                    <td colspan="5"></td>
+                    <th class="text-right">{{ totalAmount }}</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</section>
